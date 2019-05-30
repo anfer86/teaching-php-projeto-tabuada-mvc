@@ -3,17 +3,16 @@
 class TabuadaController
 {
 
-  private $view = new View();
-  
-  function __construct(){  
+  function __construct(){    
   }
 
   function gerarTabuada($request){
+
   	$data = $request->getBody();
   	
   	// Verificação de Dados  	
   	if (! isset($data['numero'])){
-  		return $this->render('erro', $response);;
+  		return View::render('erro');;
   	} 
 
   	// Pede ao model para gerar a tabuada
@@ -21,8 +20,8 @@ class TabuadaController
   	$model = new TabuadaModel($numero, 10);
   	$response = $model->gerarTabuada();
   	
-    // Renderiza a view enviand oa resposta    
-    $this->view->render('calcularTabuada', $response);
+    // Renderiza a view enviando a resposta    
+    View::render('calcularTabuada', $response);
     
   }
 
