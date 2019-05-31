@@ -59,9 +59,17 @@ class Router
   {    
     $methodDictionary = $this->{strtolower($this->request->requestMethod)};    
     $formatedRoute = $this->formatRoute($this->request->requestUri);
-    $method = $methodDictionary[$formatedRoute];
-
     
+    /*
+    This modification was made by me, anfer86, to handle with
+    routes that not exist    
+    */    
+    if (!in_array($formatedRoute, array_keys($methodDictionary) )){
+      $this->defaultRequestHandler();
+      return;
+    }
+  
+    $method = $methodDictionary[$formatedRoute];    
 
     if(is_null($method))
     {
