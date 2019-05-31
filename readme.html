@@ -1055,8 +1055,8 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>readme</title></head><body><article class="markdown-body"><h1 id="projeto-tabuada-usando-rotas">Projeto Tabuada usando Rotas<a class="headerlink" href="#projeto-tabuada-usando-rotas" title="Permanent link"></a></h1>
-<p>Este é um projeto para ensino de uso de Rotas em PHP. O objetivo deste projeto é aprender a criar uma aplicação de cálculo de tabuada com PHP e utilizar rotas e urls amigáveis.</p>
+</style><title>readme</title></head><body><article class="markdown-body"><h1 id="projeto-tabuada-usando-rotas-e-arquitetura-mvc">Projeto Tabuada usando Rotas e arquitetura MVC<a class="headerlink" href="#projeto-tabuada-usando-rotas-e-arquitetura-mvc" title="Permanent link"></a></h1>
+<p>Este é um projeto para ensino de uso de Rotas em PHP e de arquitetura MVC (Model-View-Controller). O objetivo deste projeto é aprender a criar uma aplicação de cálculo de tabuada com PHP e utilizar rotas e urls amigáveis, bem como entender como ocorre a comunicação entre as camadas na arquitetura MVC.</p>
 <h2 id="pre-requisitos">Pré-requisitos<a class="headerlink" href="#pre-requisitos" title="Permanent link"></a></h2>
 <ul>
 <li>
@@ -1070,19 +1070,19 @@ body .markdown-body
 </ul>
 <h2 id="instalacao">Instalação<a class="headerlink" href="#instalacao" title="Permanent link"></a></h2>
 <p>Clonar o repositório do GitHub.
-<div class="codehilite"><pre><span class="nv">$ </span>git clone https://github.com/anfer86/teaching-php-projeto-tabuada-routes.git
-<span class="nv">$ </span><span class="nb">cd </span>teaching-php-projeto-tabuada-routes
+<div class="codehilite"><pre><span class="nv">$ </span>git clone https://github.com/anfer86/teaching-php-projeto-tabuada-mvc.git
+<span class="nv">$ </span><span class="nb">cd </span>teaching-php-projeto-tabuada-mvc
 </pre></div></p>
 <p>Adicionar um Virtual Host para o nosso projeto. Para isso, abrir o arquivo <code>httpd-vhosts.conf</code> dentro do diretório de instalação do Apache. Por ex. <code>c:/xampp/apache/conf/extra/httpd-vhosts.conf</code>. Vamos adicionar um endereço local para acessar a nossa aplicação no endereço <code>projeto-tabuada-routes.localhost</code>.
 <div class="codehilite"><pre>&lt;VirtualHost *:80&gt;
-DocumentRoot <span class="s2">&quot;C:\xampp\htdocs\teaching-php-projeto-tabuada-routes&quot;</span>
-ServerName projeto-tabuada-routes.localhost
-&lt;Directory <span class="s2">&quot;C:\xampp\htdocs\teaching-php-projeto-tabuada-routes&quot;</span>&gt;
+DocumentRoot <span class="s2">&quot;C:\xampp\htdocs\teaching-php-projeto-tabuada-mvc&quot;</span>
+ServerName projeto-tabuada-mvc.localhost
+&lt;Directory <span class="s2">&quot;C:\xampp\htdocs\teaching-php-projeto-tabuada-mvc&quot;</span>&gt;
 &lt;/Directory&gt;
 &lt;/VirtualHost&gt;
 </pre></div></p>
 <h2 id="utilizacao">Utilização<a class="headerlink" href="#utilizacao" title="Permanent link"></a></h2>
-<p>Para rodar a aplicação iniciar o servidor Apache e entrar no endereço <code>http://projeto-tabuada-routes.localhost</code>. </p>
+<p>Para rodar a aplicação iniciar o servidor Apache e entrar no endereço <code>http://projeto-tabuada-mvc.localhost</code>. </p>
 <h2 id="desenvolvimento">Desenvolvimento<a class="headerlink" href="#desenvolvimento" title="Permanent link"></a></h2>
 <p>O projeto foi desenvolvido com:</p>
 <ul>
