@@ -10,8 +10,14 @@
 
 	<h1>Projeto Tabuada</h1>
 
-	<?php	
-	session_start();	
+	<?php
+	# Esta linha permite que esta view renderizada tanto
+	# usando a função 'include' como a função 'header'
+	# Quando for usando 'include' a sessão já terá sido
+	# iniciada pelo controller.
+	# Quando for usado 'header' a sessão terá de ser
+	# iniciada novamente.
+	if (!isset($_SESSION)) session_start();
 	?>
 
 	<?php if ( ! isset($_SESSION['response']) ) { ?> 

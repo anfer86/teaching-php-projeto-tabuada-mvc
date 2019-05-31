@@ -1,5 +1,8 @@
 <?php
 
+# More details about this class in the following link published by John O. Paul:
+# https://medium.com/the-andela-way/how-to-build-a-basic-server-side-routing-system-in-php-e52e613cf241
+
 class Router
 {
   private $request;
@@ -57,6 +60,8 @@ class Router
     $methodDictionary = $this->{strtolower($this->request->requestMethod)};    
     $formatedRoute = $this->formatRoute($this->request->requestUri);
     $method = $methodDictionary[$formatedRoute];
+
+    
 
     if(is_null($method))
     {
