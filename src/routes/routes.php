@@ -12,10 +12,6 @@ $router->get('/', function() {
 });
 
 $router->post('/gerarTabuada', function($request) {
-	if(!isset($_SESSION)) session_start();
-	# Armazenamos o número enviado numa requisição
-	# via POST em uma variável de sessão para
-	# transitar entre as páginas	
 	$controller = new TabuadaController();
 	return $controller->gerarTabuada($request);	
 });
