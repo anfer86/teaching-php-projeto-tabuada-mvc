@@ -15,7 +15,7 @@ class TabuadaModel
   function gerarTabuada(){
   	$data = array();
 
-  	for ($i = 0; $i < 10; $i++){
+  	for ($i = 1; $i <= $this->tamanho ; $i++){
   		$item = array();
   		$item['operando1'] = $this->numero;
   		$item['operando2'] = $i;
